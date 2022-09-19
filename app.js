@@ -2,8 +2,11 @@ const http = require("http");
 const { request } = require("https");
 
 const server = http.createServer((req, res) => {
-  res.write("Hello Nodejs");
-  res.end();
+  res.writeHead(200, { 'Content-Type': 'application/json' });
+  res.end(JSON.stringify({
+    data: 'Hello World !',
+    message: 'Omari the King'
+  }));
 })
 
 const port = 3000
