@@ -1,7 +1,27 @@
-exports.area = function (r) {
-  return Math.PI * r * r;
+class Circle{
+area(r) {
+  return Math.PI*r*r
 }
+  circumference(r) {
+    return 2*Math.PI*r*r
+  }
+}
+module.exports = Circle;
+// class Circle {
+//   area(r) {
+//     return Math.PI * r * r;
+//   }
 
-exports.circumference = function (r) {
-  return 2 * Math.PI;
-}
+//   circumference(r) {
+//   return  2*Math.PI * r * r
+//   }
+// }
+// module.exports = Circle;
+
+// exports.area = function (r) {
+//   return Math.PI * r * r;
+// };
+
+// exports.circumference = function (r) {
+//   return 2*Math.PI * r * r
+// }
