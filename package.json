@@ -2,9 +2,9 @@
   "name": "learn",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "main.js",
   "scripts": {
-    "dev":"nodemon app.js"
+    "dev":"nodemon main.js"
   },
   "author": "",
   "license": "ISC",
