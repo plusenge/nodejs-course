@@ -1,25 +1,17 @@
 
 const express = require("express");
-const router = express.Router()
+const router = express.Router();
+const bookRouter = require("./book")
 
-router
-  .route("/book")
-  .get((req, res) => {
-  res.send("All books")
-  })
-  .post((req, res) => {
-    res.json({
-    data: "Book is posted",
-    message: "Welcome to Book store!",
-  })
+router.get("/", (req, res) => {
+  res.send("Hello World")
 })
 
-router.get('/book/:id', (req, res) => {
-  res.send(req.params.id)
-})
+router.use("/book",bookRouter);
 
 router.all('/*', (req, res) => {
   res.send("PAGE NOT FOUND")
-})
+});
 
+router.use(bookRouter)
 module.exports = router;

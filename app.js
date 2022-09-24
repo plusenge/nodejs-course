@@ -2,7 +2,6 @@
 const http = require("http");
 const fs = require("fs");
 
-
 const server = http.createServer((req, res) => {
   if (req.url === '/') {
     res.writeHead(200, { "Content-type": "text/html" })
@@ -40,7 +39,6 @@ console.log("Server listening on port " + port)
 })
 
 
- 
 const Circle = require('./circle');
 const circle = new Circle();
 console.log(circle.area(5))
